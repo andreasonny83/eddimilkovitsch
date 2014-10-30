@@ -4,67 +4,79 @@
 }
 
 body {
-	background-color: #575757;
+	background: url(../images/background.jpg) no-repeat;
+	/*background-color: #575757;*/
+	background-size: cover;
+	-moz-background-size: cover;
+	-webkit-background-size: cover;
+	-o-background-size: cover;
+	background-attachment: fixed;
 	font-family: Ubuntu, sans-serif;
 }
 #master { 
-  background: url(../images/background.jpg) no-repeat;
-  margin: 0 auto;
-  width: 1015px;
-  padding-top: 70px;
-  position: relative;
+
+}
+header {
+	padding: 200px 0;
 }
 header h1 {
-	background: url(../images/logo.png) no-repeat;
-	line-height: 110px;
-	text-indent: -99999em;
+	line-height: 80px;
+	text-align: center;
+	font-size: 62px;
+	color: #FFF;
+	text-shadow: 0px -1px 3px #000000;
 }
 nav {
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	height: 70px;
-	background-color: rgba(134, 134, 134, 0.8);
+	margin-top: 70px;
 }
 nav ul {
 	list-style-type: none;
+	margin: 0 auto;
+	text-align: center;
 }
 nav ul li {
 	display: inline-block;
-	line-height: 70px;
+	line-height: 62px;
 	padding: 0 5px;
+	margin: 0 5px;
+	border: 2px solid #D81736;
+	background: rgba(0,0,0,0.2);
 	transition: background-color 0.414141s linear;
 }
-nav ul li.home:hover {
+nav ul li:hover {
 	background-color: rgba(255, 0, 0, 0.34);
-}
-nav ul li.about:hover {
-	background-color: rgba(0, 255, 0, 0.34);
-}
-nav ul li.exibitions:hover {
-	background-color: rgba(0, 0, 255, 0.34);
-}
-nav ul li.works:hover {
-	background-color: rgba(255, 232, 0, 0.34);
-}
-nav ul li.contact:hover {
-	background-color: rgba(132, 0, 255, 0.34);
 }
 nav ul li a {
 	display: block;
-	color: #414141;
-	font-size: 28px;
+	color: #E56D81;
+	font-size: 26px;
 	text-decoration: none;
 	padding: 0 10px;
+	text-shadow: 0px -1px 1px #000;
 }
-nav ul#main_menu li:hover a {
+nav ul li:hover a {
 	color: #ddd;
+}
+nav.fixed {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	margin: 0;
+	padding: 15px 0;
+	background: rgba(0,0,0,0.7);
+}
+nav.fixed ul li {
+	line-height: 50px;
+}
+nav.fixed ul li a {
+	font-size: 24px;
 }
 
 section {
 	min-height: 600px;
 	padding: 0 15px;
+	background-color: #F1F8F9;
 }
 
 footer .menu {
