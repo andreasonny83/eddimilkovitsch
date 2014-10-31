@@ -1,17 +1,26 @@
 // Global variables
 var menu_items,
 	article_items = [],
-	articles;
+	articles,
+	debug_mode = false; // set to true to see the log messages
+
+// print the backup messages
+function log( message ) {
+	if ( debug_mode ) {
+		console.log( message );
+	}
+}
 
 // highlight the menu item accoding the current Y position
 function highlightCurrentItem( posY ) {
 
 	jQuery.each( article_items, function( i, val ) {
-		// console.log( val.position );
+
 		if ( ( posY + 10 ) > val.position ) {
 			$( "#main_menu li" ).removeClass( "highlight" );
 			$( "." + val.name ).addClass( "highlight" );
 		}
+
 	});
 
 }
@@ -46,7 +55,8 @@ $( document ).ready( function() {
 			var link = "#" + $(this).attr('class');
 			link = link.replace(/\s(.*)/,'');
 
-			console.log( link );
+			log( link );
+
 			$('html, body').animate({scrollTop : $( link ).position().top },500);
 
 			return false;
