@@ -4,15 +4,32 @@
 }
 
 body {
-	background: url(../images/background.jpg) no-repeat;
+	font-family: Ubuntu, sans-serif;
+	background-color: #ccc;
+}
+/* mobile-first default background for Header and Footer */
+header, footer {
+	background: url(http://sonnywebdesign.net/eddimilkovitsch/images/background_low.jpg) no-repeat;
+}
+/* Small desktop background for Header and Footer */
+@media only screen and (min-width:600px) {
+	header, footer {
+		background: url(http://sonnywebdesign.net/eddimilkovitsch/images/background_med.jpg) no-repeat;
+	}
+}
+/* Hi resolution background for Header and Footer */
+@media only screen and (min-width:1200px) {
+	header, footer {
+		background: url(http://sonnywebdesign.net/eddimilkovitsch/images/background_hi.jpg) no-repeat;
+	}
+}
+header {
+	background-position: center top;
 	background-size: cover;
 	-moz-background-size: cover;
 	-webkit-background-size: cover;
 	-o-background-size: cover;
 	background-attachment: fixed;
-	font-family: Ubuntu, sans-serif;
-}
-header {
 	padding-top: 200px;
 	height: 450px;
 }
@@ -93,11 +110,17 @@ article {
 }
 
 footer {
-	background: url(../images/classy-fabric.png);
-	background-color: rgba(0,0,0,0.5);
+	background-size: cover;
+	-moz-background-size: cover;
+	-webkit-background-size: cover;
+	-o-background-size: cover;
+	background-attachment: fixed;
+	background-position: center bottom;
 }
 footer .menu {
 	padding: 30px;
+	background: url(../images/classy-fabric.png);
+	background-color: rgba(0,0,0,0.5);
 }
 footer .menu ul.social li.description {
 	display: block;
