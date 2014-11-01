@@ -9,18 +9,18 @@ body {
 }
 /* mobile-first default background for Header and Footer */
 header, footer {
-	background: url(http://sonnywebdesign.net/eddimilkovitsch/images/background_low.jpg) no-repeat;
+	background: url(../images/background_low.jpg) no-repeat;
 }
 /* Small desktop background for Header and Footer */
 @media only screen and (min-width:600px) {
 	header, footer {
-		background: url(http://sonnywebdesign.net/eddimilkovitsch/images/background_med.jpg) no-repeat;
+		background: url(../images/background_med.jpg) no-repeat;
 	}
 }
 /* Hi resolution background for Header and Footer */
 @media only screen and (min-width:1200px) {
 	header, footer {
-		background: url(http://sonnywebdesign.net/eddimilkovitsch/images/background_hi.jpg) no-repeat;
+		background: url(../images/background_hi.jpg) no-repeat;
 	}
 }
 header {
@@ -84,7 +84,8 @@ nav.fixed {
 	right: 0;
 	margin: 0;
 	padding: 15px 0;
-	background: rgba(0,0,0,0.7);
+	background: rgba(0,0,0,0.85);
+	border-bottom: 4px solid #000;
 }
 nav.fixed ul li {
 	line-height: 50px;

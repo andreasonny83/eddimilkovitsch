@@ -74,11 +74,13 @@ $( window ).scroll( function() {
 	
 	var posY = $( window ).scrollTop();
 
+	log( posY );
+
 	// highlight the menu item according to the current Y position
 	highlightCurrentItem( posY );
 
 	// Show the fixed menu
-	if ( posY > 420 ) {
+	if ( posY > 330 ) {
 		if ( !$( "#navbar" ).hasClass( "fixed" ) ) {
 			$( "#navbar" ).hide().addClass( "fixed" ).fadeIn( 500 );
 		}
