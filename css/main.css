@@ -102,13 +102,15 @@ section {
 	box-shadow: 0 -1px 10px #000, 0 1px 10px #000;
 }
 article {
-	/*just for debugging*/
 	min-height: 400px;
-	/*background-color: #ddd;*/
-	/**/
 	max-width: 950px;
+	overflow: hidden;
 	margin: 0 auto;
 	padding: 100px 15px 0;
+}
+
+article #image_gallery_wrapper {
+	margin-top: 30px;
 }
 
 footer {

@@ -67,6 +67,11 @@ $( document ).ready( function() {
 	var posY = $( window ).scrollTop();
 	highlightCurrentItem( posY );
 
+	// Load the image gallery when the document is ready
+	$('#image_gallery').galleryView({
+		panel_width: 950
+	});
+
 });
 
 // On page scroll...
