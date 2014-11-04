@@ -183,6 +183,15 @@ footer .menu ul.social li.twitter a:hover {
 	color: #eee;
 	border-color: #eee;
 }
+footer .menu ul.social li.linkedin a {
+	color: #728ab8;
+	border-color: #728ab8;
+}
+footer .menu ul.social li.linkedin a:hover {
+	background-color: #728ab8;
+	color: #eee;
+	border-color: #eee;
+}
 footer .menu ul.social a:hover {
 	transition: background-color 0.414141s linear;
 }
