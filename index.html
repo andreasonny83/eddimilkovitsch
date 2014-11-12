@@ -2,11 +2,12 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eddi Milkovitsch</title>
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
     <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="css/image_gallery/jquery.galleryview-3.0-dev.css">
+    <link rel="stylesheet"  href="css/lightSlider.css">
+    <link rel="stylesheet"  href="css/lightGallery.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 
@@ -36,28 +37,26 @@
             </article>
             <article id="works">
                 <h2>Works</h2>
-                <div id="image_gallery_wrapper">
-                    <ul id="image_gallery">
-                        <li><img src="images/works/alfabeto_colore.jpg" alt="Alfabeto Colore" title="Alfabeto Colore" data-description="Some more information about the photo"></li>
-                        <li><img src="images/works/anc_cartulam.jpg" alt="Cartulam" title="Cartulam" data-description=""></li>
-                        <li><img src="images/works/effe.jpg" alt="Effe" title="Effe" data-description=""></li>
-                        <li><img src="images/works/extrema_ratio.jpg" alt="Extrema Ratio" title="Extrema Ratio" data-description=""></li>
-                        <li><img src="images/works/frammenti.jpg" alt="Frammenti" title="Frammenti" data-description=""></li>
-                        <li><img src="images/works/la_noble_art.jpg" alt="La Noble Art" title="La Noble Art" data-description=""></li>
-                        <li><img src="images/works/la_strada_1.jpg" alt="La Strada 1" title="La Strada 1" data-description=""></li>
-                        <li><img src="images/works/la_strada_2.jpg" alt="La Strada 2" title="La Strada 2" data-description=""></li>
-                        <li><img src="images/works/monocromo_patinato.jpg" alt="Monocromo Patinato" title="Monocromo Patinato" data-description=""></li>
-                        <li><img src="images/works/nihil_minus.jpg" alt="Nihil Minus" title="Nihil Minus" data-description=""></li>
-                        <li><img src="images/works/nocturne.jpg" alt="Nocturne" title="Nocturne" data-description=""></li>
-                        <li><img src="images/works/osservatore_osservato.jpg" alt="Osservatore Osservato" title="Osservatore Osservato" data-description=""></li>
-                        <li><img src="images/works/primi_passi.jpg" alt="Primi Passi" title="Primi Passi" data-description=""></li>
-                        <li><img src="images/works/senza_titolo.jpg" alt="Senza Titolo" title="Senza Titolo" data-description=""></li>
-                        <li><img src="images/works/tavola_n_2.jpg" alt="Tavola n.2" title="Tavola n.2" data-description=""></li>
-                        <li><img src="images/works/tomo_primo.jpg" alt="Tomo Primo" title="Tomo Primo" data-description=""></li>
-                        <li><img src="images/works/traditio_cartae.jpg" alt="Traditio Cartae" title="Traditio Cartae" data-description=""></li>
-                        <li><img src="images/works/untitled_1.jpg" alt="Untitled 1" title="Untitled 1" data-description=""></li>
-                </ul>
-                </div>
+                <ul id="lightSlider">
+                    <li data-thumb="images/works/thumb_alfabeto_colore.jpg" data-src="images/works/alfabeto_colore.jpg"      >      <img src="images/works/slider_alfabeto_colore.jpg"      ></li>
+                    <li data-thumb="images/works/thumb_effe.jpg" data-src="images/works/effe.jpg"                 >                 <img src="images/works/slider_effe.jpg"                 ></li>
+                    <li data-thumb="images/works/thumb_anc_cartulam.jpg" data-src="images/works/anc_cartulam.jpg"         >         <img src="images/works/slider_anc_cartulam.jpg"         ></li>
+                    <li data-thumb="images/works/thumb_extrema_ratio.jpg" data-src="images/works/extrema_ratio.jpg"        >        <img src="images/works/slider_extrema_ratio.jpg"        ></li>
+                    <li data-thumb="images/works/thumb_frammenti.jpg" data-src="images/works/frammenti.jpg"            >            <img src="images/works/slider_frammenti.jpg"            ></li>
+                    <li data-thumb="images/works/thumb_la_noble_art.jpg" data-src="images/works/la_noble_art.jpg"         >         <img src="images/works/slider_la_noble_art.jpg"         ></li>
+                    <li data-thumb="images/works/thumb_la_strada_1.jpg" data-src="images/works/la_strada_1.jpg"          >          <img src="images/works/slider_la_strada_1.jpg"          ></li>
+                    <li data-thumb="images/works/thumb_la_strada_2.jpg" data-src="images/works/la_strada_2.jpg"          >          <img src="images/works/slider_la_strada_2.jpg"          ></li>
+                    <li data-thumb="images/works/thumb_monocromo_patinato.jpg" data-src="images/works/monocromo_patinato.jpg"   >   <img src="images/works/slider_monocromo_patinato.jpg"   ></li>
+                    <li data-thumb="images/works/thumb_nihil_minus.jpg" data-src="images/works/nihil_minus.jpg"          >          <img src="images/works/slider_nihil_minus.jpg"          ></li>
+                    <li data-thumb="images/works/thumb_nocturne.jpg" data-src="images/works/nocturne.jpg"             >             <img src="images/works/slider_nocturne.jpg"             ></li>
+                    <li data-thumb="images/works/thumb_osservatore_osservato.jpg" data-src="images/works/osservatore_osservato.jpg"><img src="images/works/slider_osservatore_osservato.jpg"></li>
+                    <li data-thumb="images/works/thumb_primi_passi.jpg" data-src="images/works/primi_passi.jpg"          >          <img src="images/works/slider_primi_passi.jpg"          ></li>
+                    <li data-thumb="images/works/thumb_senza_titolo.jpg" data-src="images/works/senza_titolo.jpg"         >         <img src="images/works/slider_senza_titolo.jpg"         ></li>
+                    <li data-thumb="images/works/thumb_tavola_n_2.jpg" data-src="images/works/tavola_n_2.jpg"           >           <img src="images/works/slider_tavola_n_2.jpg"           ></li>
+                    <li data-thumb="images/works/thumb_tomo_primo.jpg" data-src="images/works/tomo_primo.jpg"           >           <img src="images/works/slider_tomo_primo.jpg"           ></li>
+                    <li data-thumb="images/works/thumb_traditio_cartae.jpg" data-src="images/works/traditio_cartae.jpg"      >      <img src="images/works/slider_traditio_cartae.jpg"      ></li>
+                    <li data-thumb="images/works/thumb_untitled_1.jpg" data-src="images/works/untitled_1.jpg"           >           <img src="images/works/slider_untitled_1.jpg"           ></li>
+            </ul>
             </article>
             <article id="contact">
                 <h2>Contact</h2>
@@ -80,8 +79,8 @@
         </footer>
     </div>
     <script src="js/jquery-2.1.1.min.js"></script>
-    <script src="js/jquery.galleryview-3.0-dev.js"></script>
-    <script src="js/jquery.timers-1.2.js"></script>    
+    <script src="js/jquery.lightSlider.min.js"></script> 
+    <script src="js/lightGallery.min.js"></script> 
     <script src="js/eddimikovitsch.js"></script>
 </body>
 </html>

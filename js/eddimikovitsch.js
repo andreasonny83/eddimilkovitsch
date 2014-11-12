@@ -68,9 +68,20 @@ $( document ).ready( function() {
 	highlightCurrentItem( posY );
 
 	// Load the image gallery when the document is ready
-	$('#image_gallery').galleryView({
-		panel_width: 950
-	});
+	$('#lightSlider').lightSlider({
+		gallery: true,
+		loop: true,
+		autoWidth: true,
+		currentPagerPosition:'middle',
+		enableTouch: true,
+		enableDrag: true,
+		thumbItem: 12,
+		onSliderLoad: function(plugin) {
+            plugin.lightGallery({
+            	closable: false,
+            });
+        }
+    });
 
 });
 
