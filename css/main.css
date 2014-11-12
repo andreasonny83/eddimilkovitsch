@@ -50,7 +50,7 @@ nav ul {
 }
 nav ul li {
 	display: inline-block;
-	line-height: 62px;
+	line-height: 50px;
 	padding: 0 5px;
 	margin: 0 5px;
 	border: 2px solid #DF4A4A;
@@ -69,7 +69,7 @@ nav ul li:hover {
 nav ul li a {
 	display: block;
 	color: #DF4A4A;
-	font-size: 26px;
+	font-size: 24px;
 	text-decoration: none;
 	padding: 0 10px;
 	text-shadow: 0px -1px 1px #000;
@@ -89,10 +89,10 @@ nav.fixed {
 	z-index: 999;
 }
 nav.fixed ul li {
-	line-height: 50px;
+	line-height: 40px;
 }
 nav.fixed ul li a {
-	font-size: 24px;
+	font-size: 21px;
 }
 
 section {
