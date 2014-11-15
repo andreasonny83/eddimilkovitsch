@@ -70,12 +70,15 @@ $( document ).ready( function() {
 	// Load the image gallery when the document is ready
 	$('#lightSlider').lightSlider({
 		gallery: true,
+		item: 1,
 		loop: true,
-		autoWidth: true,
+		enableDrag: false,
+		galleryMargin: 15,
+		// freeMove: false,
+		// enableTouch: false,
+		// autoWidth: true,
 		currentPagerPosition:'middle',
-		enableTouch: true,
-		enableDrag: true,
-		thumbItem: 12,
+		// thumbItem: 12,
 		onSliderLoad: function(plugin) {
             plugin.lightGallery({
             	closable: false,
