@@ -84,29 +84,24 @@
             </article>
             <article id="contact">
                 <h2>Contact</h2>
-
-
-                <div id="form-main">
-                    <div id="form-div">
-                        <form class="form" id="form1">
-                            <p class="name">
-                                <i class="contact-icon fa fa-user fa-2x"></i>
-                                <input name="name" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="Name" id="name" autofocus/>
-                            </p>
-                            <p class="email">
-                                <i class="contact-icon fa fa-envelope fa-2x"></i>
-                                <input name="email" type="email" class="validate[required,custom[email]] feedback-input" id="email" placeholder="Email"/>
-                            </p>
-                            <p class="text">
-                                <i class="contact-icon fa fa-pencil fa-2x"></i>
-                                <textarea name="text" class="validate[required,length[6,300]] feedback-input" id="comment" placeholder="Comment"></textarea>
-                            </p>  
-                            <div class="submit">
-                                <input type="submit" value="SEND" id="button-blue"/>
-                                <div class="ease"></div>
-                            </div>
-                        </form>
+                <div id="contact-container">
+                    <div>
+                        <i class="fa fa-user fa-2x" id="contact-icon-user"></i>
+                        <input name="name" type="text" class="validate[required, custom[onlyLetter], lenght[0,100]] contact-input" placeholder="Name and surname" autofocus id="contact-name" />
                     </div>
+                    <div>
+                        <i class="fa fa-envelope fa-2x" id="contact-icon-mail"></i>
+                        <input name="email" type="email" class="validate[required, custom[email], lenght[0,100]] contact-input" placeholder="Email" id="contact-email" />
+                    </div>
+                    <div>
+                        <i class="fa fa-pencil fa-2x" id="contact-icon-pencil"></i>
+                        <textarea name="text" type="email" class="validate[required, lenght[6,300]] contact-input" placeholder="Comment" id="contact-comment"></textarea>
+                    </div>
+                    <div id="contact-button">
+                        <input type="submit" value="SEND" id="contact-send" />
+                        <div id="ease"></div>
+                    </div>
+                    <div id="contact-button-bottom"></div> <!-- Required for optimal transition when the cursor come from the bottom -->
                 </div>
 
             </article>
