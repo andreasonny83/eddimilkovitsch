@@ -105,7 +105,7 @@
                     <div id="homer">
                     <?php
                         require_once('captcha/recaptchalib.php');
-                        $publickey = "6LcK0_0SAAAAAFXwYc20V0mdZXGvo-s0mDWuitIh";
+                        $publickey = "6LfZ1P0SAAAAAJ8vMUr8ZVRJsyvlLoDBDoARoLI1";
                         echo recaptcha_get_html($publickey);
                     ?>
                     </div>
