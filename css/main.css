@@ -203,6 +203,10 @@ article div:first-of-type p {
 	border: 4px solid #17b;
 	outline: none;
 }
+#homer {
+	margin-top: -15px;
+	padding: 0 0 20px 60px;
+}
 #contact-button-bottom {
 	height: 20px;
 }

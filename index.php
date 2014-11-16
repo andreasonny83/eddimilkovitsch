@@ -84,10 +84,10 @@
             </article>
             <article id="contact">
                 <h2>Contact</h2>
-                <div id="contact-container">
+                <form id="contact-container" method="post" action="verify.php">
                     <div>
                         <i class="fa fa-user fa-2x" id="contact-icon-user"></i>
-                        <input name="name" type="text" class="validate[required, custom[onlyLetter], lenght[0,100]] contact-input" placeholder="Name and surname" autofocus id="contact-name" />
+                        <input name="name" type="text" class="validate[required, custom[onlyLetter], lenght[0,100]] contact-input" placeholder="Name and surname" id="contact-name" />
                     </div>
                     <div>
                         <i class="fa fa-envelope fa-2x" id="contact-icon-mail"></i>
@@ -97,12 +97,24 @@
                         <i class="fa fa-pencil fa-2x" id="contact-icon-pencil"></i>
                         <textarea name="text" type="email" class="validate[required, lenght[6,300]] contact-input" placeholder="Comment" id="contact-comment"></textarea>
                     </div>
+                    <script type="text/javascript">
+                        var RecaptchaOptions = {
+                        theme : 'blackglass'
+                        };
+                    </script>
+                    <div id="homer">
+                    <?php
+                        require_once('captcha/recaptchalib.php');
+                        $publickey = "6LcK0_0SAAAAAFXwYc20V0mdZXGvo-s0mDWuitIh";
+                        echo recaptcha_get_html($publickey);
+                    ?>
+                    </div>
                     <div id="contact-button">
                         <input type="submit" value="SEND" id="contact-send" />
                         <div id="ease"></div>
                     </div>
                     <div id="contact-button-bottom"></div> <!-- Required for optimal transition when the cursor come from the bottom -->
-                </div>
+                </form>
 
             </article>
         </section>
