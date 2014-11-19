@@ -31,6 +31,11 @@ $( document ).ready( function() {
 	menu_items 	= $( "#main_menu li" );
 	articles	= $( "article" );
 
+    // reCaptcha options
+    var RecaptchaOptions = {
+	    theme : 'blackglass'
+    };
+
 	// get the Articles position and store them inside an object array
 	// set 'xxx' to 'home' if you want to highlight the Home button
 	article_items.push({ name: 'xxx', position: 0 });
@@ -74,11 +79,7 @@ $( document ).ready( function() {
 		loop: true,
 		enableDrag: false,
 		galleryMargin: 15,
-		// freeMove: false,
-		// enableTouch: false,
-		// autoWidth: true,
 		currentPagerPosition:'middle',
-		// thumbItem: 12,
 		onSliderLoad: function(plugin) {
             plugin.lightGallery({
             	closable: false,
