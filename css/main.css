@@ -199,9 +199,11 @@ article div:first-of-type p {
 	background-color: #F5E6E6;
 	outline: none;
 }
-#homer {
-	margin-top: -15px;
-	padding: 0 0 20px 60px;
+#recaptcha_area {
+	padding: 5px;
+	border: 3px solid #5c5c5c;
+	border-radius: 5px;
+	margin: 0 auto;
 }
 #contact-button-bottom {
 	height: 20px;
@@ -211,12 +213,13 @@ article div:first-of-type p {
 	width: 30%;
 }
 #contact-send {
-	width: 100%;
+	width: 300px;
 	padding: 10px 0;
+	margin-top: 20px;
 	background-color: #323232;
 	color: #DF4A4A;
 	cursor: pointer;
-	font-size: 1.3em;
+	font-size: 28px;
 	border: 2px solid #DF4A4A;
 	-webkit-transition: all 0.5s;
 	-moz-transition: all 0.5s;
@@ -318,5 +321,5 @@ footer .copyright {
 	text-align: center;
 }
 footer .copyright p {
-	color: #C59696;
+	color: #B8B8B8;
 }

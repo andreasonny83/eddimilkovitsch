@@ -100,12 +100,10 @@
                         <i class="fa fa-pencil fa-2x" id="contact-icon-pencil"></i>
                         <textarea name="text" type="email" class="validate[required, lenght[6,300]] contact-input" placeholder="Comment" id="contact-comment"></textarea>
                     </div>
-                    <div id="homer">
                     <?php
                         require_once( 'config/settings.php' );
                         echo recaptcha_get_html( $publickey );
                     ?>
-                    </div>
                     <div id="contact-button">
                         <input type="submit" value="Send" id="contact-send" />
                     </div>
