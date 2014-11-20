@@ -107,7 +107,6 @@
                     <div id="contact-button">
                         <input type="submit" value="Send" id="contact-send" />
                     </div>
-                    <div id="contact-button-bottom"></div> <!-- Required for optimal transition when the cursor come from the bottom -->
                 </form>
 
             </article>

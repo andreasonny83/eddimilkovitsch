@@ -8,13 +8,13 @@ body {
 }
 body, p {
 	font-family: Ubuntu, sans-serif;
-	font-size: 16px;
+	font-size: 15px;
 	color: #333;
 	text-shadow: 0px 1px 1px rgba(255,255,255,0.5);
 }
 p {
-	padding: 8px 0;
-	line-height: 21px;
+	padding: 6px 0;
+	line-height: 20px;
 }
 /* mobile-first default background for Header and Footer */
 header, footer {
@@ -166,8 +166,8 @@ article div:first-of-type p {
 
 /* Start of contact form */
 #contact-container {
-	margin-bottom: 25px;
-	padding-top: 30px;
+	margin-bottom: 50px;
+	padding: 30px 0;
 	text-align: center;
 }
 .contact-input {
@@ -204,21 +204,18 @@ article div:first-of-type p {
 	border-radius: 5px;
 	margin: 0 auto;
 }
-#contact-button-bottom {
-	height: 20px;
-}
 #contact-button {
 	margin: auto;
 	width: 30%;
 }
 #contact-send {
 	width: 300px;
-	padding: 10px 0;
+	padding: 8px 0;
 	margin-top: 20px;
 	background-color: #323232;
 	color: #DF4A4A;
 	cursor: pointer;
-	font-size: 28px;
+	font-size: 24px;
 	border: 2px solid #DF4A4A;
 	-webkit-transition: all 0.5s;
 	-moz-transition: all 0.5s;
@@ -321,4 +318,8 @@ footer .copyright {
 }
 footer .copyright p {
 	color: #B8B8B8;
+}
+
+iframe {
+	display: none;
 }
