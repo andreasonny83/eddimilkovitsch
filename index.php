@@ -1,4 +1,3 @@
-<?php require_once( 'config/settings.php' ); ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -103,6 +102,7 @@
                     </div>
                     <div id="homer">
                     <?php
+                        require_once( 'config/settings.php' );
                         echo recaptcha_get_html( $publickey );
                     ?>
                     </div>
