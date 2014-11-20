@@ -6,8 +6,8 @@
     <title>Eddi Milkovitsch</title>
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
     <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/lightSlider.css">
-    <link rel="stylesheet" href="css/lightGallery.css">
+    <link rel="stylesheet" type="text/css" href="css/lightSlider.css">
+    <link rel="stylesheet" type="text/css" href="css/lightGallery.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 
@@ -56,9 +56,11 @@
                     <p>The encounter with the artist Ciro Gallo, joining Maria Campitelli 's GRUPPO78 and, more recently, joining the UNA Academy of Trieste, constitute the latest phase of my ongoing artistic journey.</p>
                 </div>
             </article>
+
             <article id="exibitions">
                 <h2>Exibitions</h2>
             </article>
+
             <article id="works">
                 <h2>Works</h2>
                 <ul id="lightSlider">
@@ -80,10 +82,34 @@
                     <li data-thumb="images/works/thumb_tomo_primo.jpg" data-src="images/works/tomo_primo.jpg"           >           <img src="images/works/slider_tomo_primo.jpg"           ></li>
                     <li data-thumb="images/works/thumb_traditio_cartae.jpg" data-src="images/works/traditio_cartae.jpg"      >      <img src="images/works/slider_traditio_cartae.jpg"      ></li>
                     <li data-thumb="images/works/thumb_untitled_1.jpg" data-src="images/works/untitled_1.jpg"           >           <img src="images/works/slider_untitled_1.jpg"           ></li>
-            </ul>
+                </ul>
             </article>
+
             <article id="contact">
                 <h2>Contact</h2>
+                <form id="contact-container" class="frame" method="post" action="verify.php">
+                    <div>
+                        <i class="fa fa-user fa-2x" id="contact-icon-user"></i>
+                        <input name="name" type="text" class="validate[required, custom[onlyLetter], lenght[0,100]] contact-input" placeholder="Name and surname" id="contact-name" />
+                    </div>
+                    <div>
+                        <i class="fa fa-envelope fa-2x" id="contact-icon-mail"></i>
+                        <input name="email" type="email" class="validate[required, custom[email], lenght[0,100]] contact-input" placeholder="Email" id="contact-email" />
+                    </div>
+                    <div>
+                        <i class="fa fa-pencil fa-2x" id="contact-icon-pencil"></i>
+                        <textarea name="text" type="email" class="validate[required, lenght[6,300]] contact-input" placeholder="Comment" id="contact-comment"></textarea>
+                    </div>
+                    <?php
+                        require_once( 'config/settings.php' );
+                        echo recaptcha_get_html( $publickey );
+                    ?>
+                    <div id="contact-button">
+                        <input type="submit" value="Send" id="contact-send" />
+                    </div>
+                    <div id="contact-button-bottom"></div> <!-- Required for optimal transition when the cursor come from the bottom -->
+                </form>
+
             </article>
         </section>
 

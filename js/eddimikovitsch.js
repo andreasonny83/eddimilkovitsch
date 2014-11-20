@@ -74,11 +74,7 @@ $( document ).ready( function() {
 		loop: true,
 		enableDrag: false,
 		galleryMargin: 15,
-		// freeMove: false,
-		// enableTouch: false,
-		// autoWidth: true,
 		currentPagerPosition:'middle',
-		// thumbItem: 12,
 		onSliderLoad: function(plugin) {
             plugin.lightGallery({
             	closable: false,
