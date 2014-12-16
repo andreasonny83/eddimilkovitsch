@@ -1,12 +1,24 @@
+
+/********* reset *********/
+
 * {
 	margin: 0;
 	padding: 0;
 }
+ul, ol, li {
+	margin: 0;
+	padding: 0;
+}
+ul, ol {
+	list-style-type: none;
+}
+
+/********* main rules *********/
 
 body {
 	background-color: #ccc;
 }
-body, p {
+body, p, li {
 	font-family: Ubuntu, sans-serif;
 	font-size: 15px;
 	color: #333;
@@ -32,6 +44,9 @@ header, footer {
 		background: url(../images/background_hi.jpg) no-repeat;
 	}
 }
+
+/********* header *********/
+
 header {
 	background-position: center top;
 	background-size: cover;
@@ -49,6 +64,9 @@ header h1 {
 	color: #FFF;
 	text-shadow: 0px -1px 3px #000000;
 }
+
+/********* nav *********/
+
 nav {
 	margin-top: 70px;
 }
@@ -104,6 +122,8 @@ nav.fixed ul li a {
 	font-size: 21px;
 }
 
+/********* content *********/
+
 section {
 	padding: 0;
 	background-color: #FEFAFA;
@@ -148,7 +168,10 @@ article div:first-of-type p {
 	padding-left: 0;
 	padding-right: 10px;
 }
-.lSSlideOuter, .frame {
+#exibitions .box {
+	padding: 25px;
+}
+.lSSlideOuter, .box {
 	padding: 5px;
 	box-shadow: 11px 0px 20px -10px #999, -11px 0px 20px -10px #999;
 	margin-bottom: 10px;
@@ -164,7 +187,8 @@ article div:first-of-type p {
 	text-align: center;
 }
 
-/* Start of contact form */
+/********* contact form *********/
+
 #contact-container {
 	margin-bottom: 50px;
 	padding: 30px 0;
@@ -198,10 +222,7 @@ article div:first-of-type p {
 	background-color: #F5E6E6;
 	outline: none;
 }
-#recaptcha_area {
-	padding: 5px;
-	border: 3px solid #5c5c5c;
-	border-radius: 5px;
+.g-recaptcha > div > div {
 	margin: 0 auto;
 }
 #contact-button {
@@ -226,7 +247,8 @@ article div:first-of-type p {
 	border-color: #DF4A4A;
 	color: #ddd;
 }
-/* End of contact form */
+
+/********* footer *********/
 
 footer {
 	background-size: cover;
@@ -320,6 +342,8 @@ footer .copyright p {
 	color: #B8B8B8;
 }
 
+/********* extra rules *********/
+
 iframe {
-	display: none;
+	/*display: none;*/
 }
