@@ -1,20 +1,25 @@
 <?php
-require_once( 'captcha/recaptchalib.php' );
-$privatekey = '6LfZ1P0SAAAAAKGKKkibNwUb3ND54kBz_zSR6tNP';
 
-$resp = recaptcha_check_answer ( $privatekey,
-                                 $_SERVER["REMOTE_ADDR"],
-                                 $_POST["recaptcha_challenge_field"],
-                                 $_POST["recaptcha_response_field"] );
+				$email;$comment;$captcha;
+				// if(isset($_POST['email'])){
+				// 	$email=$_POST['email'];
+				// }if(isset($_POST['comment'])){
+				// 	$email=$_POST['comment'];
+				// }
+				if( isset( $_POST['g-recaptcha-response'] ) ) {
+					$captcha=$_POST['g-recaptcha-response'];
+				}
 
-
-  if ( !$resp->is_valid ) {
-    // What happens when the CAPTCHA was entered incorrectly
-    die ("The reCAPTCHA wasn't entered correctly. Go back and try it again." .
-         "(reCAPTCHA said: " . $resp->error . ")");
-  } else {
-    // Your code here to handle a successful verification
-    print("<h1>Cio che figo che te son, te ga rivado a metter dei numeri in fila! :D E adesso?!?</h1>");
-  }
-
+				if(!$captcha) {
+					echo '<h2>Please check the the captcha form.</h2>';
+					exit;
+				}
+				$response = file_get_contents( "https://www.google.com/recaptcha/api/siteverify?secret=6LdLXf8SAAAAANtLr1ieLr8A2llP9LGc1FyB_Rj6&response=".$captcha."&remoteip=".$_SERVER['REMOTE_ADDR']);
+				if($response.success==false)
+				{
+					echo '<h2>You are spammer ! Get the @$%K out</h2>';
+				}else
+				{
+					echo '<h2>Thanks for posting comment.</h2>';
+				}
 ?>

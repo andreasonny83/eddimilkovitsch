@@ -27,6 +27,21 @@ function highlightCurrentItem( posY ) {
 
 $( document ).ready( function() {
 
+	// Load the image gallery when the document is ready
+	$('#lightSlider').lightSlider({
+		gallery: true,
+		item: 1,
+		loop: true,
+		enableDrag: false,
+		galleryMargin: 15,
+		currentPagerPosition:'middle',
+		onSliderLoad: function(plugin) {
+            plugin.lightGallery({
+            	closable: false,
+            });
+        }
+    });
+
 	// store menu items inside menu_items
 	menu_items 	= $( "#main_menu li" );
 	articles	= $( "article" );
@@ -50,37 +65,22 @@ $( document ).ready( function() {
 	/**
 	Navigation menu
 	**/
-		menu_items.click( function( e ) {
+	menu_items.click( function( e ) {
 
-			var link = "#" + $(this).attr('class');
-			link = link.replace(/\s(.*)/,'');
+		var link = "#" + $(this).attr('class');
+		link = link.replace(/\s(.*)/,'');
 
-			log( link );
+		log( link );
 
-			$('html, body').animate({scrollTop : $( link ).position().top },500);
+		$('html, body').animate({scrollTop : $( link ).position().top },500);
 
-			return false;
+		return false;
 
-		});
+	});
 
 	// Highlight the correct menu item
 	var posY = $( window ).scrollTop();
 	highlightCurrentItem( posY );
-
-	// Load the image gallery when the document is ready
-	$('#lightSlider').lightSlider({
-		gallery: true,
-		item: 1,
-		loop: true,
-		enableDrag: false,
-		galleryMargin: 15,
-		currentPagerPosition:'middle',
-		onSliderLoad: function(plugin) {
-            plugin.lightGallery({
-            	closable: false,
-            });
-        }
-    });
 
 });
 
@@ -108,4 +108,3 @@ $( window ).scroll( function() {
 	}
 	
 });
-
