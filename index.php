@@ -33,7 +33,7 @@
 		<section>
 			<article id="about">
 				<h2>About</h2>
-				<div class="multi_column">
+				<div class="col-md-4">
 					<p>Born in Trieste (Italy) in 1957, where he lives and works.<br/>
 					Self-taught.</p>
 					<p>Member of the "Incipit" Calligraphic Club</p>
@@ -42,7 +42,7 @@
 					<p>High school surveyor and works manager diploma and a diploma in Archive management, Paleography and Diplomatics, issued by the Record Office of Trieste.</p>
 					<p>Currently working at the Chamber of Commerce, Industry, Craft and Agriculture of Trieste (Italy)</p>
 				</div>
-				<div class="multi_column">
+				<div class="col-md-4">
 					<p>I feel attracted to letters and I am irresistibly attracted to alphabets.</p>
 					<p>Writing, especially relief writing, is currently the most relevant subject among my artistic pursuits. And paper.</p>
 					<p>Whether plain or expensive, coloured, written or torn up. Newspapers, book or magazine pages, drawing paper, industrially produced or hand made paper. But always strictly second-hand.</p>
@@ -51,7 +51,7 @@
 					<p>I do not know if I can consider myself an artist, I am devoid of proper artistic training, I am a self-taught artist.</p>
 					<p>I have never studied art, except for a brief period of time (many years ago) during a nude drawing course held at the Revoltella Museum by Professor Nino Perizi, who was also my art teacher in middle school.</p>
 				</div>
-				<div class="multi_column">
+				<div class="col-md-4">
 					<p>Although I have always possessed a fair amout of dexterity, I must say that I have found my true artistic calling only over these past few years, thanks to the contacts I have had with a calligraphy club and an enlightening participation to a course held by Jean Larcher on the art of embossing.</p>
 					<p>I will not hide the fact that I am not a calligrapher, and I feel immense admiration for those who are capable of writing so beautifully. I have deepened my knowledge by enrolling in a two-year course dedicated to "Archive management, paleography and diplomatics" held by the Record Office.</p>
 					<p>My first real approach to the artistic world took place only at the end of 2001, in the study of Paolo Cervi Kervischer, by participating to the activities the artist himself promotes.</p>
