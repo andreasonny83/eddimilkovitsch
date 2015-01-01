@@ -13,7 +13,6 @@ function log( message ) {
 
 // highlight the menu item accoding the current Y position
 function highlightCurrentItem( posY ) {
-
 	jQuery.each( article_items, function( i, val ) {
 
 		if ( ( posY + 10 ) > val.position ) {
@@ -22,7 +21,28 @@ function highlightCurrentItem( posY ) {
 		}
 
 	});
+}
 
+function timeout_trigger() {
+	// get the Articles position and store them inside an object array
+	// set 'xxx' to 'home' if you want to highlight the Home button
+	article_items[0] = ({ name: 'xxx', position: 0 });
+
+	articles.each( function( item ) {
+
+		var name, item_position;
+
+		name 			= $(this).attr('id');
+		item_position 	= $(this).position().top;
+
+		// store the article positions inside an object array
+		article_items[item+1] = ({ name: name, position: item_position });
+
+	});
+
+	if ( debug_mode ) {
+		console.dir(article_items);
+	}
 }
 
 $( document ).ready( function() {
@@ -36,31 +56,48 @@ $( document ).ready( function() {
 		galleryMargin: 15,
 		currentPagerPosition:'middle',
 		onSliderLoad: function(plugin) {
-            plugin.lightGallery({
-            	closable: false,
-            });
-        }
-    });
+			plugin.lightGallery({
+				closable: false,
+			});
+		}
+	});
+
+	$( '.togglable' ).hide();
+
+	$( '.toggle' ).click( function() {
+		$target = $( this ).data( "target" );
+		if ( $( ".togglable[data-id='"+$target+"']" ).is( ":visible" ) ) {
+			$( ".togglable" ).hide();
+		}
+		else {
+			$( ".togglable" ).hide();
+			$( ".togglable[data-id='"+$target+"']" ).show( 'slow' );
+		}
+		if( debug_mode ) {
+			console.log($target);
+		}
+		return false;
+	});
+
+	$( '.readmore' ).click( function() {
+		$( this ).hide();
+		$( '.readmore_div' ).show( 'slow' );
+		setTimeout( 'timeout_trigger()', 1000 );
+		return false;
+	});
+
+	$( '.readmore_hide' ).click( function() {
+		$( '.readmore_div' ).hide( 'slow' );
+		$( '.readmore' ).show();
+		setTimeout( 'timeout_trigger()', 1000 );
+		return false;
+	});
 
 	// store menu items inside menu_items
 	menu_items 	= $( "#main_menu li" );
 	articles	= $( "article" );
 
-	// get the Articles position and store them inside an object array
-	// set 'xxx' to 'home' if you want to highlight the Home button
-	article_items.push({ name: 'xxx', position: 0 });
-
-	articles.each( function( item ) {
-
-		var name, item_position;
-
-		name 			= $(this).attr('id');
-		item_position 	= $(this).position().top;
-
-		// store the article positions inside an object array
-		article_items.push({ name: name, position: item_position });
-
-	});
+	setTimeout( 'timeout_trigger()', 1000 );
 
 	/**
 	Navigation menu

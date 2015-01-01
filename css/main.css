@@ -55,7 +55,7 @@ header {
 	-o-background-size: cover;
 	background-attachment: fixed;
 	padding-top: 200px;
-	height: 450px;
+	height: 600px;
 }
 header h1 {
 	line-height: 80px;
@@ -93,6 +93,9 @@ nav ul li.highlight a {
 nav ul li:hover {
 	background-color: rgba(255, 0, 0, 0.34);
 }
+nav ul li, nav ul li a {
+	outline: none;
+}
 nav ul li a, nav ul li a:hover, nav ul li a:focus {
 	display: block;
 	color: #DF4A4A;
@@ -101,8 +104,28 @@ nav ul li a, nav ul li a:hover, nav ul li a:focus {
 	padding: 0 10px;
 	text-shadow: 0px -1px 1px #000;
 }
+nav ul li a, nav ul li a:focus {
+	color: #DF4A4A;
+}
 nav ul li:hover a {
 	color: #ddd;
+}
+@media only screen and (max-width:767px) {
+	header {
+		padding-top: 90px;
+	}
+	header h1 {
+		line-height: 60px;
+	}
+	nav {
+		margin-top: 50px;
+	}
+	nav ul li {
+		margin-bottom: 12px;
+	}
+	nav ul li a, nav ul li a:hover, nav ul li a:focus {
+		font-size: 24px;
+	}
 }
 nav.fixed {
 	position: fixed;
@@ -110,7 +133,7 @@ nav.fixed {
 	left: 0;
 	right: 0;
 	margin: 0;
-	padding: 15px 0;
+	padding: 15px 0 5px;
 	background: rgba(0,0,0,0.85);
 	border-bottom: 4px solid #000;
 	z-index: 999;
@@ -121,7 +144,6 @@ nav.fixed ul li {
 nav.fixed ul li a {
 	font-size: 21px;
 }
-
 /********* content *********/
 
 section {
@@ -134,7 +156,7 @@ article {
 	max-width: 1200px;
 	overflow: hidden;
 	margin: 0 auto;
-	padding: 78px 30px 0;
+	padding: 105px 30px 0;
 }
 article h2 {
 	line-height: 92px;
@@ -149,27 +171,12 @@ article p:first-child:first-letter {
 	padding-top: 5px;
 	font-family: Georgia, sans-serif;
 }
-article#about {
-	background: url('../images/about/about.jpg') no-repeat;
-	background-position: -130px 170px;
+article#about > img {
+	margin-bottom: 30px;
+	width: 130%;
 }
-@media only screen and (min-width:600px) {
-	article#about {
-		background-position: -25px 170px;
-	}
-}
-@media only screen and (min-width:1170px) {
-	article#about {
-		background-position: -15px 170px;
-	}
-}
-@media only screen and (min-width:1200px) {
-	article#about {
-		background-position: 0 170px;
-	}
-}
-article#about h2 {
-	margin-bottom: 510px;
+article#about .row + .row {
+	margin-top: 25px;
 }
 .multi_column {
 	float: left;
@@ -183,15 +190,6 @@ article div:first-of-type p {
 	padding-left: 0;
 	padding-right: 10px;
 }
-#exibitions .box {
-	padding: 25px;
-}
-.lSSlideOuter, .box {
-	padding: 5px;
-	box-shadow: 11px 0px 20px -10px #999, -11px 0px 20px -10px #999;
-	margin-bottom: 10px;
-	background-color: #eee;
-}
 .lSSlideOuter img {
 	cursor: pointer;
 }
@@ -200,6 +198,41 @@ article div:first-of-type p {
 }
 .lSSlideOuter .lightSlider > *, .lSSlideOuter .lSGallery li {
 	text-align: center;
+}
+.row.box {
+	background-color: #eee;
+}
+@media only screen and (min-width:1200px) {
+	article#about > img {
+		display: none;
+	}
+	article#about {
+		background: url('../images/about/about.jpg') no-repeat;
+		background-position: 0 200px;
+	}
+	article#about h2 {
+		margin-bottom: 530px;
+	}
+}
+@media only screen and (min-width:768px) {
+	article {
+		padding: 78px 30px 0;
+	}
+	article#about > img {
+		width: 100%;
+	}
+	#exibitions .box .box {
+		padding: 25px;
+	}
+	.row.box {
+		background: none;
+	}
+	.row .lSSlideOuter, .row .box {
+		padding: 5px;
+		box-shadow: 11px 0px 20px -10px #999, -11px 0px 20px -10px #999;
+		margin-bottom: 10px;
+		background-color: #eee;
+	}
 }
 
 /********* contact form *********/
@@ -240,10 +273,6 @@ article div:first-of-type p {
 .g-recaptcha > div > div {
 	margin: 0 auto;
 }
-#contact-button {
-	margin: auto;
-	width: 30%;
-}
 #contact-send {
 	width: 300px;
 	padding: 8px 0;
@@ -278,21 +307,21 @@ footer .menu {
 	background: url(../images/classy-fabric.png);
 	background-color: rgba(0,0,0,0.5);
 }
-footer .menu ul.social li.description {
-	display: block;
-	font-size: 32px;
-	color: #eee;
-	line-height: 50px;
-	padding-bottom: 15px;
-}
 footer .menu ul.social {
 	list-style-type: none;
 	text-align: center;
 	border: 1px dashed #CCC;
 	margin: 0 auto;
 	padding: 25px 0px;
-	width: 500px;
+	max-width: 500px;
 	border-radius: 10px;
+}
+footer .menu ul.social li.description {
+	display: block;
+	font-size: 32px;
+	color: #eee;
+	line-height: 50px;
+	padding-bottom: 15px;
 }
 footer .menu ul.social li.social {
 	display: inline-block;
@@ -355,6 +384,7 @@ footer .copyright {
 }
 footer .copyright p {
 	color: #B8B8B8;
+	margin: 0;
 }
 
 /********* extra rules *********/
