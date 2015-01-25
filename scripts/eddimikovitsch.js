@@ -2,7 +2,7 @@
 var menu_items,
 	article_items = [],
 	articles,
-	debug_mode = false; // set to true to see the log messages
+	debug_mode = false; // set to true to see the log messagesmain_menu
 
 // print the backup messages
 function log( message ) {
@@ -47,6 +47,8 @@ function timeout_trigger() {
 
 $( document ).ready( function() {
 
+	console.log("main ready");
+
 	// Load the image gallery when the document is ready
 	$('#lightSlider').lightSlider({
 		gallery: true,
@@ -76,6 +78,11 @@ $( document ).ready( function() {
 		if( debug_mode ) {
 			console.log($target);
 		}
+		$GoTo = $( this ).position().top + $( "#exibitions" ).position().top + 80;
+		$('html, body').animate({scrollTop : $GoTo },500);
+
+		setTimeout( 'timeout_trigger()', 1000 );
+		
 		return false;
 	});
 
@@ -102,7 +109,7 @@ $( document ).ready( function() {
 	/**
 	Navigation menu
 	**/
-	menu_items.click( function( e ) {
+	menu_items.click( function() {
 
 		var link = "#" + $(this).attr('class');
 		link = link.replace(/\s(.*)/,'');

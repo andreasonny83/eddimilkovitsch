@@ -75,6 +75,9 @@ nav ul {
 	margin: 0 auto;
 	text-align: center;
 }
+nav ul#lang_menu {
+	margin-bottom: 22px;
+}
 nav ul li {
 	display: inline-block;
 	line-height: 50px;
@@ -96,19 +99,33 @@ nav ul li:hover {
 nav ul li, nav ul li a {
 	outline: none;
 }
+nav ul li a:hover, nav ul li a:focus, nav ul li:hover a {
+	color: #fff;
+}
+nav ul li a {
+	color: #DF4A4A;
+}
 nav ul li a, nav ul li a:hover, nav ul li a:focus {
 	display: block;
-	color: #DF4A4A;
 	font-size: 24px;
 	text-decoration: none;
 	padding: 0 10px;
 	text-shadow: 0px -1px 1px #000;
 }
-nav ul li a, nav ul li a:focus {
-	color: #DF4A4A;
+nav ul li.flag {
+	border: 0;
 }
-nav ul li:hover a {
-	color: #ddd;
+nav ul li.flag, nav ul li.flag a, nav.fixed ul li.flag, nav.fixed ul li.flag a {
+	padding: 0;
+	line-height: inherit;
+	font-size: inherit;
+}
+nav ul li.flag img {
+	opacity: 0.8;
+	transition: opacity 0.3s linear;
+}
+nav ul li.flag img:hover {
+	opacity: 1;
 }
 @media only screen and (max-width:767px) {
 	header {
@@ -141,6 +158,14 @@ nav.fixed {
 nav.fixed ul li {
 	line-height: 40px;
 }
+nav.fixed ul#lang_menu {
+	position: absolute;
+	right: 15px;
+	line-height: 44px;
+}
+nav.fixed ul#lang_menu li.flag {
+	line-height: 28px;
+}
 nav.fixed ul li a {
 	font-size: 21px;
 }
@@ -162,6 +187,7 @@ article h2 {
 	line-height: 92px;
 	font-size: 42px;
 	color: #222;
+	text-transform: capitalize;
 }
 article p:first-child:first-letter {
 	float: left;
