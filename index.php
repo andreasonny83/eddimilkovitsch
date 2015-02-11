@@ -1,14 +1,7 @@
 <?php
-	require_once( 'variables.php' );
-
-	// Get the lang from the URL
-	$lang_passed = isset( $_GET['lang'] ) ? $_GET['lang'] : 'it';
-	// If available, display the correct website
-	// Otherwise Italian must be the default
-	$lang = $lang_array[$lang_passed];
-	$lang = isset( $lang ) ? $lang : 'it';
-
 	require_once( 'head.php' );
+	require_once( 'variables.php' );
+	require_once( 'verify.php' );
 	require_once( 'menu.php' );
 ?>
 
@@ -78,8 +71,10 @@
 									<td><a href='http://www.museorevoltella.it/'>Museo Revoltella, Trieste</a></td>
 								</tr>
 								<tr class="togglable" data-id="2003">
-									<td></td>
-									<td colspan="2" class="text-center"><img src="images/exhibitions/2004.jpg"></td>
+									<td colspan="2" class="text-center" width="60%"><img src="images/exhibitions/2004.jpg">
+									<td>
+										<?php echo $exhibitions[$lang][13]?>
+									</td>
 								</tr>
 								<tr>
 									<td>2004</td>
@@ -92,8 +87,10 @@
 									<td><a href='http://en.wikipedia.org/wiki/Trieste%E2%80%93Opicina_tramway'>Trenovia Trieste-Opicina, Trieste</a></td>
 								</tr>
 								<tr class="togglable" data-id="2004">
-									<td></td>
-									<td colspan="2" class="text-center"><img src="images/exhibitions/2004.jpg"></td>
+									<td colspan="2" class="text-center" width="60%"><img src="images/exhibitions/2004.jpg"></td>
+									<td>
+										<?php echo $exhibitions[$lang][13]?>
+									</td>
 								</tr>
 								<tr>
 									<td>2004</td>
@@ -193,7 +190,7 @@
 				<h2><?php echo $menu[$lang][4]?></h2>
 				<div class="row box">
 					<div class="col-md-12">
-						<form id="contact-container" class="frame box" method="post" action="verify.php">
+						<form id="contact-container" class="frame box" method="post" action="<?php echo $_SERVER['PHP_SELF']?>">
 							<div>
 								<i class="fa fa-user fa-2x" id="contact-icon-user"></i>
 								<input name="name" type="text" class="validate[required, custom[onlyLetter], lenght[0,100]] contact-input" placeholder="<?php echo $contacts[$lang][0];?>" id="contact-name" />
@@ -207,7 +204,7 @@
 								<textarea name="text" type="email" class="validate[required, lenght[6,300]] contact-input" placeholder="<?php echo $contacts[$lang][2];?>" id="contact-comment"></textarea>
 							</div>
 							<div class="g-recaptcha" data-sitekey="6LdLXf8SAAAAAPymu-p_xGZViVSZl8xwNjSw1VtW"></div>
-							<input type="submit" value="<?php echo $contacts[$lang][3];?>" id="contact-send" />
+							<input type="submit" name='submit' value="<?php echo $contacts[$lang][3];?>" id="contact-send" />
 						</form>
 					</div>
 				</div>

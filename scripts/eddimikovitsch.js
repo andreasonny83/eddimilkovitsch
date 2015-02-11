@@ -49,6 +49,14 @@ $( document ).ready( function() {
 
 	console.log("main ready");
 
+	// If a popup message is present, fade it out slowly
+	if ( $( '.popup_div' ).length ) {
+		setTimeout( function() {
+			$( '.popup_div' ).fadeOut( 2000 );
+		}
+		, 2000 );
+	};
+
 	// Load the image gallery when the document is ready
 	$('#lightSlider').lightSlider({
 		gallery: true,

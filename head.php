@@ -1,3 +1,11 @@
+<?php
+	// Get the lang from the URL
+	$lang_passed = isset( $_GET['lang'] ) ? $_GET['lang'] : 'it';
+	// If available, display the correct website
+	// Otherwise Italian must be the default
+	$lang = $lang_array[$lang_passed];
+	$lang = isset( $lang ) ? $lang : 'it';
+?>
 <!DOCTYPE html>
 <html lang="<?php echo $lang?>">
 <head>
