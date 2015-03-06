@@ -1,6 +1,6 @@
 <?php
 	require_once( 'variables.php' );
-	require_once( 'head.php' );
+	require_once( 'header.php' );
 	require_once( 'verify.php' );
 	require_once( 'menu.php' );
 ?>
