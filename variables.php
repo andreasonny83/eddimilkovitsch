@@ -6,25 +6,25 @@
 	);
 
 	$menu = array(
-		'it' => [
+		'it' => array(
 			'home',
 			'biografia',
 			'esibizioni',
 			'opere',
 			'contatti'
-		],
+		),
 
-		'en' => [
+		'en' => array(
 			'home',
 			'about',
 			'exhibitions',
 			'works',
 			'contacts'
-		]
+		)
 	);
 
 	$about = array(
-		'it' => [
+		'it' => array(
 			'<p>Nato a Trieste nel 1957, dove vive e lavora.</p>',
 			'<p>Alfabeti, parole, scritture sovrapposte, tratte da giornali e riviste. Tutto di carta o cartone; tutto riciclato. Spesso le lettere emergono per lo spessore del carattere, con un gioco quindi leggermente tridimensionale. Il mondo di Eddi Milkovitsch è racchiuso in questi pochi dati; una passione, una febbre suscitata dalle lettere, che lo costringe a comporle, evocarle, ad ingigantirle, ed enfatizzarle quindi, in contesti appropriati, fatti ancor sempre di carta e scritture.</p>
 			<p>Scrittura di matrice occidentale; il suo “impero dei segni” è legato ad una cultura che discende da quella classica, dalla capitale quadrata romana, divulgandosi poi nei linguaggi del mondo occidentale, non solo di ascendenza latina; non comprende cioè quello che per Roland Barthes è l’impero dei segni per eccellenza, la scrittura giapponese confusa con la pittura e con la vita.</p>
@@ -57,9 +57,9 @@
 			'Nascondi le recensioni',
 
 			'Leggi le recensioni...'
-		],
+		),
 
-		'en' => [
+		'en' => array(
 			'<p>Born in Trieste in 1957, where he lives and works.</p>',
 
 			'<p>Alphabets, words, overlapping writings, taken from newspapers and magazines. Everything is made out of recycled paper or cardboard. Often the letters stand out with the thickness of the print, in a slightly tridimensional game. Eddi Milkovitsch’s world can be condensed in this brief outline; a passion, a fever caused by letters that forces him to assemble, evocate and enlarge them, emphasizing them in proper context, always made of paper and writings.</p>
@@ -93,11 +93,11 @@
 			'Hide the reviews',
 
 			'Read the reviews...'
-		]
+		)
 	);
 
 	$exhibitions = array(
-		'it' => [
+		'it' => array(
 			'Anno',
 			'Esibizione',
 			'Localita',
@@ -112,9 +112,9 @@
 			'Collectiva "5° Simposio Internazionale Socrate Stavropulos"',
 			'Personale "Leggi[adr]i Testi"',
 			"Eddi Milkovitsch è attratto in modo irresistibile dalle lettere dell’alfabeto.<br/>Esse sono protagoniste di calibrate composizioni in cui la carta (e il cartone) assieme alla scrittura sono dominanti: tutto materiale rigorosamente riciclato e riabilitato dall’intervento estetico che sceglie, costruisce, trasforma, in un elogio infinito del carattere/parola.<br/>In questa occasione l’artista cita direttamente, in un riquadro essenziale, gli elementi che costituiscono il binario del tram radicato nel terreno. La trave di legno, la ghiaia sparsa intorno, un frammento di cavo lucido di pece che allude alla cremagliera. E la scrittura, le lettere dove sono? La ghiaia, con sorprendente mimesi, è costituita da frammenti di giornali disposti a sacchetti rigonfi e schiacciati, ben pigiati l’uno accanto all’altro. Anche il binario del tram dunque si avvale del mezzo elettivo di Milkovitsch, senza smentirne il coerente percorso.<br/><br/><i>Maria Campitelli</i>",
-		],
+		),
 
-		'en' => [
+		'en' => array(
 			'Year',
 			'Exhibition',
 			'Location',
@@ -128,32 +128,48 @@
 			'Collective "5° Simposio Internazionale Socrate Stavropulos"',
 			'Collective "5° Simposio Internazionale Socrate Stavropulos"',
 			'Personal "Leggi[adr]i Testi"'
-		]
+		)
 	);
 
 	$contacts = array(
-		'it' => [
+		'it' => array(
 			'Nome e cognome',
 			'E-Mail',
 			'Messaggio',
-			'Invia'
-		],
+			'Invia',
+			'errore',
+			'Controlla il codice di verifica e riprova.',
+			'inviato',
+			'Controlla tutti i campi obbligatori e prova ancora.',
+			'L\'indirizzo di posta elettronica che hai fornito non e\' valido. Prova ancora.',
+			'Sei uno spammer ! Vattene da qui',
+			'Grazie. Il tuo messaggio e\' stato inviato a destinazione',
+			'Ops! Qualcosa e\' andato storto. Prova a mandare il messaggio di nuovo.'
+		),
 
-		'en' => [
+		'en' => array(
 			'Name and surname',
 			'E-Mail',
 			'Comment',
-			'Send'
-		]
+			'Send',
+			'error',
+			'Please check the captcha form and try again.',
+			'sent',
+			'Please check out all the mandatory fields and try again.',
+			'The e-mail address you provided is not valid. Please try again.',
+			'You are spammer ! Get the @$%K out',
+			'Thanks for posting comment.',
+			'Ops! Something went wrong. Please, try sending the message again.'
+		)
 	);
 
 	$footer = array(
-		'it' => [
+		'it' => array(
 			'<b>Seguimi</b> sui Social Network!'
-		],
-		'en' => [
+		),
+		'en' => array(
 			'Let’s Connect! <b>Stay in Touch</b>'
-		]
+		)
 	);
 
 ?>

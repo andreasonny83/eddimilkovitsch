@@ -1,6 +1,6 @@
 <?php
-	require_once( 'head.php' );
 	require_once( 'variables.php' );
+	require_once( 'head.php' );
 	require_once( 'verify.php' );
 	require_once( 'menu.php' );
 ?>
@@ -190,21 +190,21 @@
 				<h2><?php echo $menu[$lang][4]?></h2>
 				<div class="row box">
 					<div class="col-md-12">
-						<form id="contact-container" class="frame box" method="post" action="<?php echo $_SERVER['PHP_SELF']?>">
+						<form id="contact-container" class="frame box" method="post" action="<?php echo $_SERVER['PHP_SELF'] . '?' . $_SERVER['QUERY_STRING']?>">
 							<div>
 								<i class="fa fa-user fa-2x" id="contact-icon-user"></i>
-								<input name="name" type="text" class="validate[required, custom[onlyLetter], lenght[0,100]] contact-input" placeholder="<?php echo $contacts[$lang][0];?>" id="contact-name" />
+								<input name="name" type="text" class="contact-input" placeholder="<?php echo $contacts[$lang][0];?>" id="contact-name" required>
 							</div>
 							<div>
 								<i class="fa fa-envelope fa-2x" id="contact-icon-mail"></i>
-								<input name="email" type="email" class="validate[required, custom[email], lenght[0,100]] contact-input" placeholder="<?php echo $contacts[$lang][1];?>" id="contact-email" />
+								<input name="email" type="email" class="contact-input" placeholder="<?php echo $contacts[$lang][1];?>" id="contact-email" required>
 							</div>
 							<div>
 								<i class="fa fa-pencil fa-2x" id="contact-icon-pencil"></i>
-								<textarea name="text" type="email" class="validate[required, lenght[6,300]] contact-input" placeholder="<?php echo $contacts[$lang][2];?>" id="contact-comment"></textarea>
+								<textarea name="text" type="email" class="contact-input" placeholder="<?php echo $contacts[$lang][2];?>" id="contact-comment" required></textarea>
 							</div>
 							<div class="g-recaptcha" data-sitekey="6LdLXf8SAAAAAPymu-p_xGZViVSZl8xwNjSw1VtW"></div>
-							<input type="submit" name='submit' value="<?php echo $contacts[$lang][3];?>" id="contact-send" />
+							<input type="submit" name='submit' value="<?php echo $contacts[$lang][3];?>" id="contact-send">
 						</form>
 					</div>
 				</div>

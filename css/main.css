@@ -59,10 +59,10 @@ header, footer {
   z-index: 999;
   margin-top: -65px;
 }
-.popup_div.error {
+.popup_div.error, .popup_div.errore {
   background: #E85252;
 }
-.popup_div.sent {
+.popup_div.sent, .popup_div.inviato {
   background: #99EA71;
 }
 

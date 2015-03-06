@@ -4,21 +4,21 @@ if ( isset( $_POST['submit'] ) ) {
 		'result' => '',
 		'message' => ''
 	);
-	$report = send_email();
+	$report = send_email( $contacts, $lang );
 	echo '<div class="popup_div ' . $report['result'] . '">';
 	echo '<h2>' . $report['result'] . '</h2>';
 	echo '<p>' . $report['message'] . '</p>';
 	echo '</div>';
 }
 
-function send_email() {
+function send_email( $contacts, $lang ) {
 	if( isset( $_POST['g-recaptcha-response'] ) ) {
 		$captcha = $_POST['g-recaptcha-response'];
 	}
 	if( !$captcha ) {
 		// If the captcha is missing or not set, retun with error
-		$report['result'] = 'error';
-		$report['message'] = 'Please check the captcha form and try again.';
+		$report['result'] = $contacts[$lang][4];
+		$report['message'] = $contacts[$lang][5];
 		return $report;
 	}
 	$now     = $today = date( "F j, Y, g:i a" );
@@ -26,9 +26,14 @@ function send_email() {
 	$email   = stripslashes( $_POST['email'] );
 	$text    = stripslashes( $_POST['text'] );
 
-	if ( !isset( $name ) && !isset( $email ) && !isset( $text ) ) {
-		$report['result'] = 'error';
-		$report['message'] = 'Please check out all the mandatory fields and try again.';
+	if ( empty( $name ) || empty( $email ) || empty( $text ) ) {
+		$report['result'] = $contacts[$lang][4];
+		$report['message'] = $contacts[$lang][7];
+		return $report;
+	}
+	if( !filter_var( $email, FILTER_VALIDATE_EMAIL ) ) {
+		$report['result'] = $contacts[$lang][4];
+		$report['message'] = $contacts[$lang][8];
 		return $report;
 	}
 
@@ -116,27 +121,30 @@ function send_email() {
 	$headers .= 'From: EddiMilkovitsch.it' . "\r\n";
 	$subject = 'EddiMilkovitsch.it';
 	$response = file_get_contents( "https://www.google.com/recaptcha/api/siteverify?secret=6LdLXf8SAAAAANtLr1ieLr8A2llP9LGc1FyB_Rj6&response=".$captcha."&remoteip=".$_SERVER['REMOTE_ADDR']);
-	$to = 'info@eddimilkovitsch.it';
-	$admin = 'andreasonny83@gmail.com';
+	// $to = 'info@eddimilkovitsch.it';
+	$to = 'andreasonny83@gmail.com';
+	// $admin = 'andreasonny83@gmail.com';
 
 	if( $response.success == false ) {
-		$report['result'] = 'error';
-		$report['message'] = 'You are spammer ! Get the @$%K out';
+		$report['result'] = $contacts[$lang][4];
+		$report['message'] = $contacts[$lang][9];
 		return $report;
 	}
 	else {
 		$send_contact = mail( "$to", "$subject", $message, $headers );
 		// send to admin a copy
-		mail( "$admin", "$subject", $message, $headers );
+		if( isset( $admin ) ) {
+			mail( "$admin", "$subject", $message, $headers );
+		}
 		
 		if( $send_contact ) {
-			$report['result'] = 'sent';
-			$report['message'] = 'Thanks for posting comment.';
+			$report['result'] = $contacts[$lang][6];
+			$report['message'] = $contacts[$lang][10];
 			return $report;
 		}
 		else {
-			$report['result'] = 'error';
-			$report['message'] = 'Ops! Something went wrong. Please, try sending the message again.';
+			$report['result'] = $contacts[$lang][4];
+			$report['message'] = $contacts[$lang][11];
 			return $report;
 		}
 	}
