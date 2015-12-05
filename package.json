@@ -1,0 +1,21 @@
+{
+  "name": "eddimilkovitsch",
+  "version": "1.0.0",
+  "description": "Eddi Milkovitsch website",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andreasonny83/eddimilkovitsch.git"
+  },
+  "author": "Andrea SonnY <andreasonny83@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/andreasonny83/eddimilkovitsch/issues"
+  },
+  "homepage": "http://www.eddimilkovitsch.it",
+  "dependencies": {
+    "gulp": "^3.9.0"
+  }
+}

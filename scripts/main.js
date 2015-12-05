@@ -5,7 +5,6 @@ requirejs.config({
 		'lightSlider': 'jquery.lightSlider.min',
 		'lightGallery': 'lightGallery.min',
 		'eddi': 'eddimikovitsch',
-		// 'build': 'main-built',
 		'captcha': '//www.google.com/recaptcha/api'
 	},
 	shim: {
@@ -21,11 +20,9 @@ requirejs.config({
 		"eddi": {
 			deps: ["jquery"]
 		}
-	},
-	// waitSeconds: 15
+	}
 });
 
-// requirejs( ['build', 'captcha'],
 requirejs( ['jquery', 'bootstrap', 'lightSlider', 'lightGallery', 'eddi', 'captcha'],
 function( jQuery ) {
 });
