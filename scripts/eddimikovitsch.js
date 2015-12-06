@@ -13,9 +13,15 @@ function log( message ) {
 
 // highlight the menu item accoding the current Y position
 function highlightCurrentItem( posY ) {
+	timeout_trigger();
+
+	var nav_height = $('#main_menu').height() - 20,
+			item_name;
+
 	jQuery.each( article_items, function( i, val ) {
 
-		if ( ( posY + 10 ) > val.position ) {
+		item_name = '.about';
+		if ( ( posY + nav_height ) > val.position ) {
 			$( "#main_menu li" ).removeClass( "highlight" );
 			$( "." + val.name ).addClass( "highlight" );
 		}
@@ -32,12 +38,14 @@ function timeout_trigger() {
 
 		var name, item_position;
 
-		name 			= $(this).attr('id');
-		item_position 	= $(this).position().top;
+		name          = $(this).attr('id');
+		item_position = $(this).position().top;
 
 		// store the article positions inside an object array
-		article_items[item+1] = ({ name: name, position: item_position });
-
+		article_items[item+1] = ({
+			name: name,
+			position: item_position
+		});
 	});
 
 	if ( debug_mode ) {
@@ -47,15 +55,14 @@ function timeout_trigger() {
 
 $( document ).ready( function() {
 
-	console.log("main ready");
+	console.log("App ready");
 
 	// If a popup message is present, fade it out slowly
 	if ( $( '.popup_div' ).length ) {
 		setTimeout( function() {
 			$( '.popup_div' ).fadeOut( 2000 );
-		}
-		, 2000 );
-	};
+		}, 2000 );
+	}
 
 	// Load the image gallery when the document is ready
 	$('#lightSlider').lightSlider({
@@ -65,6 +72,7 @@ $( document ).ready( function() {
 		enableDrag: false,
 		galleryMargin: 15,
 		currentPagerPosition:'middle',
+
 		onSliderLoad: function(plugin) {
 			plugin.lightGallery({
 				closable: false,
@@ -89,22 +97,22 @@ $( document ).ready( function() {
 		$GoTo = $( this ).position().top + $( "#exibitions" ).position().top + 80;
 		$('html, body').animate({scrollTop : $GoTo },500);
 
-		setTimeout( 'timeout_trigger()', 1000 );
-		
+		setTimeout( timeout_trigger(), 1000 );
+
 		return false;
 	});
 
 	$( '.readmore' ).click( function() {
 		$( this ).hide();
 		$( '.readmore_div' ).show( 'slow' );
-		setTimeout( 'timeout_trigger()', 1000 );
+		setTimeout( timeout_trigger(), 1000 );
 		return false;
 	});
 
 	$( '.readmore_hide' ).click( function() {
 		$( '.readmore_div' ).hide( 'slow' );
 		$( '.readmore' ).show();
-		setTimeout( 'timeout_trigger()', 1000 );
+		setTimeout( timeout_trigger(), 1000 );
 		return false;
 	});
 
@@ -112,19 +120,21 @@ $( document ).ready( function() {
 	menu_items 	= $( "#main_menu li" );
 	articles	= $( "article" );
 
-	setTimeout( 'timeout_trigger()', 1000 );
+	setTimeout( timeout_trigger(), 1000 );
 
 	/**
 	Navigation menu
 	**/
 	menu_items.click( function() {
 
-		var link = "#" + $(this).attr('class');
+		var nav_height = $('#main_menu').height() - 30,
+				link = "#" + $(this).attr('class');
+
 		link = link.replace(/\s(.*)/,'');
 
 		log( link );
 
-		$('html, body').animate({scrollTop : $( link ).position().top },500);
+		$('html, body').animate({scrollTop : $( link ).position().top - nav_height},500);
 
 		return false;
 
@@ -138,7 +148,7 @@ $( document ).ready( function() {
 
 // On page scroll...
 $( window ).scroll( function() {
-	
+
 	var posY = $( window ).scrollTop();
 
 	log( posY );
@@ -158,5 +168,5 @@ $( window ).scroll( function() {
 			$( "#navbar" ).removeClass( "fixed" );
 		}
 	}
-	
+
 });

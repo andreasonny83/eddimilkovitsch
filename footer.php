@@ -12,10 +12,6 @@
 			</div>
 		</footer>
 	</div>
-	<script data-main="scripts/main" src="scripts/jquery-2.1.1.min.js"></script>
-	<script data-main="scripts/main" src="scripts/bootstrap.min.js"></script>
-	<script data-main="scripts/main" src="scripts/jquery.lightSlider.min.js"></script>
-	<script data-main="scripts/main" src="scripts/lightGallery.min.js"></script>
-	<script data-main="scripts/main" src="scripts/eddimikovitsch.js"></script>
+	<script data-main="scripts/main" src="scripts/main.min.js"></script>
 	</body>
 </html>
